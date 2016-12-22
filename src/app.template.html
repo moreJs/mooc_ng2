@@ -1,0 +1,7 @@
+<div class="ng2-demo">
+    <input type="text" name="todo_input" id="todo_input" [(ngModel)]="todo" />
+    <button (click)="add()">add</button>
+    <ul>
+        <li *ngFor="let todo of todos">{{todo}}</li>
+    </ul>
+</div>
