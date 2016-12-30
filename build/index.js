@@ -52653,8 +52653,8 @@ webpackJsonp([0,1],[
 	};
 	const core_1 = __webpack_require__(7);
 	const platform_browser_1 = __webpack_require__(25);
-	const forms_1 = __webpack_require__(29);
-	const app_component_1 = __webpack_require__(28);
+	const forms_1 = __webpack_require__(28);
+	const app_component_1 = __webpack_require__(32);
 	let AppModule = class AppModule {
 	};
 	AppModule = __decorate([
@@ -52672,48 +52672,13 @@ webpackJsonp([0,1],[
 /* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
-	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-	    return c > 3 && r && Object.defineProperty(target, key, r), r;
-	};
-	var __metadata = (this && this.__metadata) || function (k, v) {
-	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-	};
-	const core_1 = __webpack_require__(7);
-	let AppComponent = class AppComponent {
-	    constructor() {
-	        this.todos = [];
-	        this.todo = '';
-	    }
-	    add() {
-	        this.todos.push(this.todo);
-	        this.todo = '';
-	    }
-	};
-	AppComponent = __decorate([
-	    core_1.Component({
-	        selector: 'ng2-demo',
-	        templateUrl: '../src/app.template.html'
-	    }),
-	    __metadata("design:paramtypes", [])
-	], AppComponent);
-	exports.AppComponent = AppComponent;
-
-
-/***/ },
-/* 29 */
-/***/ function(module, exports, __webpack_require__) {
-
 	/**
 	 * @license Angular v2.3.1
 	 * (c) 2010-2016 Google, Inc. https://angular.io/
 	 * License: MIT
 	 */
 	(function (global, factory) {
-	     true ? factory(exports, __webpack_require__(7), __webpack_require__(30), __webpack_require__(8), __webpack_require__(9), __webpack_require__(31)) :
+	     true ? factory(exports, __webpack_require__(7), __webpack_require__(29), __webpack_require__(8), __webpack_require__(9), __webpack_require__(30)) :
 	    typeof define === 'function' && define.amd ? define(['exports', '@angular/core', 'rxjs/operator/toPromise', 'rxjs/Subject', 'rxjs/Observable', 'rxjs/observable/fromPromise'], factory) :
 	    (factory((global.ng = global.ng || {}, global.ng.forms = global.ng.forms || {}),global.ng.core,global.Rx.Observable.prototype,global.Rx,global.Rx,global.Rx.Observable));
 	}(this, function (exports,_angular_core,rxjs_operator_toPromise,rxjs_Subject,rxjs_Observable,rxjs_observable_fromPromise) { 'use strict';
@@ -58474,7 +58439,7 @@ webpackJsonp([0,1],[
 	}));
 
 /***/ },
-/* 30 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -58507,16 +58472,16 @@ webpackJsonp([0,1],[
 	//# sourceMappingURL=toPromise.js.map
 
 /***/ },
-/* 31 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var PromiseObservable_1 = __webpack_require__(32);
+	var PromiseObservable_1 = __webpack_require__(31);
 	exports.fromPromise = PromiseObservable_1.PromiseObservable.create;
 	//# sourceMappingURL=fromPromise.js.map
 
 /***/ },
-/* 32 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -58640,6 +58605,67 @@ webpackJsonp([0,1],[
 	    }
 	}
 	//# sourceMappingURL=PromiseObservable.js.map
+
+/***/ },
+/* 32 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = (this && this.__metadata) || function (k, v) {
+	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	var __param = (this && this.__param) || function (paramIndex, decorator) {
+	    return function (target, key) { decorator(target, key, paramIndex); }
+	};
+	const core_1 = __webpack_require__(7);
+	let AppComponent = class AppComponent {
+	    constructor() {
+	        this.todos = [];
+	        this.todo = '';
+	    }
+	    test(name) { }
+	    add() {
+	        const annotations = Reflect.getOwnMetadata('annotations', this.constructor);
+	        const propMetadata = Reflect.getOwnMetadata('propMetadata', this.constructor);
+	        console.log('...', annotations);
+	        console.log('...', propMetadata);
+	        this.todos.push(this.todo);
+	        this.todo = '';
+	    }
+	};
+	__decorate([
+	    core_1.Input(),
+	    __metadata("design:type", Array)
+	], AppComponent.prototype, "todos", void 0);
+	__decorate([
+	    core_1.Input(),
+	    __metadata("design:type", String)
+	], AppComponent.prototype, "todo", void 0);
+	__decorate([
+	    core_1.Output(),
+	    __metadata("design:type", Function)
+	], AppComponent.prototype, "click", void 0);
+	__decorate([
+	    __param(0, core_1.Attribute('morjs')),
+	    __metadata("design:type", Function),
+	    __metadata("design:paramtypes", [Object]),
+	    __metadata("design:returntype", void 0)
+	], AppComponent.prototype, "test", null);
+	AppComponent = __decorate([
+	    core_1.Component({
+	        selector: 'ng2-demo',
+	        templateUrl: '../src/app.template.html'
+	    }),
+	    __metadata("design:paramtypes", [])
+	], AppComponent);
+	exports.AppComponent = AppComponent;
+
 
 /***/ }
 ]);
