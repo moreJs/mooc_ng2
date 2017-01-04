@@ -1,0 +1,25 @@
+.dashboard-detail-title{
+    margin-bottom: 10px;
+}
+.dashboard-detail-title{
+    font-size: 8px;
+    margin-top: 20px;
+}
+.content-item{
+    margin-bottom: 5px;
+}
+.content-item-label{
+    font-size: 8px;
+    width: 30px;
+    display: inline-block;
+}
+.content-item-name-value{
+    font-size: 8px;
+}
+.detail-back{
+    background-color: #009688;
+    color: white;
+    border: 0px;
+    height: 18px;
+    margin-left: 88px;
+}

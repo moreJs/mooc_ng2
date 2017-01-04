@@ -1,0 +1,11 @@
+<div class="list-box">
+    <div class="list-box-title">
+        {{ title }}
+    </div>
+    <div class="list-box-content">
+        <div *ngFor="let house of houses" class="list-box-content-item">
+            <div class="list-box-content-item-index">{{house.id}}</div>
+            <div (click)="goDetail(house.id)" class="list-box-content-item-name">{{house.name}}</div>
+        </div>
+    </div>
+</div>

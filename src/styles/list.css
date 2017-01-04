@@ -1,0 +1,26 @@
+.list-box-title{
+    font-size: 12px;
+    margin: 15px 0px;
+}
+.list-box-content{
+    font-size: 10px;
+}
+.list-box-content-item{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.list-box-content-item-index{
+    padding-right: 5px;
+    background-color: #009688;
+    color: white;
+}
+.list-box-content-item-name{
+    background-color: rgba(204, 204, 204, 0.24);
+    width: 60px;
+    font-size: 8px;
+    padding-left: 5px;
+}
+.list-box-content-item-name:hover{
+    background-color: rgba(0, 150, 136, 0.33);
+}

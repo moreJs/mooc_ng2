@@ -1,0 +1,16 @@
+<div class="dashboard-detail">
+    <div class="dashboard-detail-title">
+        楼盘名称: {{ house.name }}, 价格: {{ house.price }} 万
+    </div>
+    <div class="dashboard-detail-content">
+        <div class="content-item">
+            <label for="content-item-name" class="content-item-label">name:</label>
+            <input [(ngModel)]="house.name" type="text" name="content-item-name" id="content-item-name" class="content-item-name-value"/>
+        </div>
+        <div class="content-item">
+            <label for="content-item-price" class="content-item-label">price:</label>
+            <input [(ngModel)]="house.price" type="text" name="content-item-price" id="content-item-price" class="content-item-name-value"/>
+        </div>
+    </div>
+    <button (click)="back()" class="detail-back">back</button>
+</div>
